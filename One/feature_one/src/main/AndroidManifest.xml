@@ -3,7 +3,8 @@
     package="com.transferwise.feature_one">
 
     <application>
-        <activity android:name=".FeatureOneActivity">
+        <activity android:name=".FeatureOneActivity"
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
