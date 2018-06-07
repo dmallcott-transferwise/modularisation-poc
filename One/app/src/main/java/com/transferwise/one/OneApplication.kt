@@ -2,10 +2,10 @@ package com.transferwise.one
 
 import android.app.Application
 import com.transferwise.feature_one.FeatureOneDependencyProvider
-import com.transferwise.feature_two.FeatureTwoDependencyProvider
+import com.transferwise.feature_two.FeatureTwoContract
 import com.transferwise.network.ApiClient
 
-class OneApplication : Application(), FeatureOneDependencyProvider, FeatureTwoDependencyProvider {
+class OneApplication : Application(), FeatureOneDependencyProvider, FeatureTwoContract.FeatureTwoDependencyProvider {
 
     private val client = ApiClientImpl()
 

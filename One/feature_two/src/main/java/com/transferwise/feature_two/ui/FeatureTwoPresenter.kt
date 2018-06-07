@@ -1,8 +1,8 @@
-package com.transferwise.feature_two
+package com.transferwise.feature_two.ui
 
 import com.transferwise.feature_two.interactor.GetFeatureTwoInteractor
 
-class FeatureTwoPresenter(private val interactor: GetFeatureTwoInteractor) {
+internal class FeatureTwoPresenter(private val interactor: GetFeatureTwoInteractor) {
 
     private var view: FeatureTwoView? = null
 

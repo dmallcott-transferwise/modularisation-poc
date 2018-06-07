@@ -1,14 +1,16 @@
-package com.transferwise.feature_two
+package com.transferwise.feature_two.ui
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.transferwise.feature_two.FeatureTwoContract
+import com.transferwise.feature_two.R
 import com.transferwise.feature_two.domain.FeatureTwo
 import com.transferwise.feature_two.interactor.GetFeatureTwoInteractor
 import com.transferwise.feature_two.repository.FeatureTwoRepository
 import kotlinx.android.synthetic.main.activity_feature_two.*
 
-class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
+internal class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
 
     private lateinit var presenter : FeatureTwoPresenter
 
@@ -41,7 +43,7 @@ class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
 
     private fun pretendDaggerInjectMethod() {
         // Literally pretending this is dagger
-        val provider = application as FeatureTwoDependencyProvider
+        val provider = application as FeatureTwoContract.FeatureTwoDependencyProvider
         val client = provider.provide()
         // The following line is the equivalent of creating a new Dagger component
         // for the feature module

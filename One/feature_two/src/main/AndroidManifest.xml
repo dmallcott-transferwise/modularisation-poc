@@ -3,7 +3,7 @@
     package="com.transferwise.feature_two">
 
     <application>
-        <activity android:name=".FeatureTwoActivity"></activity>
+        <activity android:name=".ui.FeatureTwoActivity"></activity>
     </application>
 
 </manifest>

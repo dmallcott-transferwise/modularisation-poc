@@ -1,13 +1,12 @@
 package com.transferwise.feature_one
 
-import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.transferwise.feature_one.domain.FeatureOne
 import com.transferwise.feature_one.repository.FeatureOneRepository
 import com.transferwise.feature_two.FeatureOneView
-import com.transferwise.feature_two.FeatureTwoActivity
+import com.transferwise.feature_two.FeatureTwoContract
 import com.transferwise.feature_two.interactor.GetFeatureOneInteractor
 import kotlinx.android.synthetic.main.activity_feature_one.*
 
@@ -29,7 +28,7 @@ class FeatureOneActivity : AppCompatActivity(), FeatureOneView {
         }
 
         featureTwo.setOnClickListener {
-            startActivity(Intent(FeatureOneActivity@this, FeatureTwoActivity::class.java))
+            FeatureTwoContract.FeatureTwoNavigator.startFeatureTwo(this)
         }
     }
 

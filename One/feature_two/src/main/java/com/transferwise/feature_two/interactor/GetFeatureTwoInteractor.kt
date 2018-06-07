@@ -3,7 +3,7 @@ package com.transferwise.feature_two.interactor
 import com.transferwise.feature_two.domain.FeatureTwo
 import com.transferwise.feature_two.repository.FeatureTwoRepository
 
-class GetFeatureTwoInteractor(private val repository: FeatureTwoRepository) {
+internal class GetFeatureTwoInteractor(private val repository: FeatureTwoRepository) {
 
     sealed class State {
         class Success(val featureTwo: FeatureTwo) : State()

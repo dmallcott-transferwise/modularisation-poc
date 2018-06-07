@@ -1,8 +1,8 @@
-package com.transferwise.feature_two
+package com.transferwise.feature_two.ui
 
 import com.transferwise.feature_two.domain.FeatureTwo
 
-interface FeatureTwoView {
+internal interface FeatureTwoView {
 
     fun showSuccess(featureTwo: FeatureTwo)
 
