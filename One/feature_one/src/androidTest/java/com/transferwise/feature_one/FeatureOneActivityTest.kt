@@ -6,7 +6,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 import org.mockito.Mockito
-import android.support.test.InstrumentationRegistry.getTargetContext
+import com.transferwise.feature_one.ui.FeatureOneActivity
 import com.transferwise.network.response.FeatureOneResponse
 
 

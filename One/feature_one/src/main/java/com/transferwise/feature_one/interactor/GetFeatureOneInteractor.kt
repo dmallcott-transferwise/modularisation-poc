@@ -1,9 +1,11 @@
-package com.transferwise.feature_two.interactor
+package com.transferwise.feature_one.interactor
 
 import com.transferwise.feature_one.domain.FeatureOne
 import com.transferwise.feature_one.repository.FeatureOneRepository
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class GetFeatureOneInteractor(private val repository: FeatureOneRepository) {
+class GetFeatureOneInteractor @Inject constructor(private val repository: FeatureOneRepository) {
 
     sealed class State {
         class Success(val featureOne: FeatureOne) : State()

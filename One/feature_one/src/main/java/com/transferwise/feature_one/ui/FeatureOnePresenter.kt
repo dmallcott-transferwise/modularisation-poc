@@ -1,9 +1,11 @@
-package com.transferwise.feature_one
+package com.transferwise.feature_one.ui
 
 import com.transferwise.feature_two.FeatureOneView
-import com.transferwise.feature_two.interactor.GetFeatureOneInteractor
+import com.transferwise.feature_one.interactor.GetFeatureOneInteractor
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class FeatureOnePresenter(private val interactor: GetFeatureOneInteractor) {
+class FeatureOnePresenter @Inject constructor(private val interactor: GetFeatureOneInteractor) {
 
     private var view: FeatureOneView? = null
 
