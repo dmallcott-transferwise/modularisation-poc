@@ -3,7 +3,7 @@ package com.transferwise.feature_one.ui
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import com.transferwise.feature_one.FeatureOneDependencyProvider
+import com.transferwise.feature_one.FeatureOneContract
 import com.transferwise.feature_one.R
 import com.transferwise.feature_one.domain.FeatureOne
 import com.transferwise.feature_two.FeatureOneView
@@ -19,7 +19,7 @@ class FeatureOneActivity : AppCompatActivity(), FeatureOneView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature_one)
 
-        (application as FeatureOneDependencyProvider).createFeatureOneComponent().inject(this)
+        (application as FeatureOneContract.DependencyProvider).createFeatureOneComponent().inject(this)
 
         title = "Feature One"
 

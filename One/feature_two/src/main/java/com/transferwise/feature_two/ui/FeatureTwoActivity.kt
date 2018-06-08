@@ -16,7 +16,7 @@ class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_feature_two)
-        pretendDaggerInjectMethod()
+        (application as FeatureTwoContract.DependencyProvider).createTwoComponent().inject(this)
 
         title = "Feature Two"
 
@@ -38,11 +38,5 @@ class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
 
     override fun showSuccess(featureTwo: FeatureTwo) {
         Toast.makeText(FeatureTwoActivity@this, featureTwo.toString(), Toast.LENGTH_LONG).show()
-    }
-
-    private fun pretendDaggerInjectMethod() {
-        // Literally pretending this is dagger
-        val provider = application as FeatureTwoContract.DependencyProvider
-        provider.createTwoComponent().inject(this)
     }
 }
