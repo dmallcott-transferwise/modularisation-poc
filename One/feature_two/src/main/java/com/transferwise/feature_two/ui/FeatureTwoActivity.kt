@@ -6,13 +6,12 @@ import android.widget.Toast
 import com.transferwise.feature_two.FeatureTwoContract
 import com.transferwise.feature_two.R
 import com.transferwise.feature_two.domain.FeatureTwo
-import com.transferwise.feature_two.interactor.GetFeatureTwoInteractor
-import com.transferwise.feature_two.repository.FeatureTwoRepository
 import kotlinx.android.synthetic.main.activity_feature_two.*
+import javax.inject.Inject
 
-internal class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
+class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
 
-    private lateinit var presenter : FeatureTwoPresenter
+    @Inject lateinit var presenter : FeatureTwoPresenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,10 +42,7 @@ internal class FeatureTwoActivity : AppCompatActivity(), FeatureTwoView {
 
     private fun pretendDaggerInjectMethod() {
         // Literally pretending this is dagger
-        val provider = application as FeatureTwoContract.FeatureTwoDependencyProvider
-        val client = provider.provide()
-        // The following line is the equivalent of creating a new Dagger component
-        // for the feature module
-        presenter = FeatureTwoPresenter(GetFeatureTwoInteractor(FeatureTwoRepository(client)))
+        val provider = application as FeatureTwoContract.DependencyProvider
+        provider.createTwoComponent().inject(this)
     }
 }

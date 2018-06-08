@@ -30,7 +30,7 @@ class FeatureOneActivity : AppCompatActivity(), FeatureOneView {
         }
 
         featureTwo.setOnClickListener {
-            FeatureTwoContract.FeatureTwoNavigator.startFeatureTwo(this)
+            FeatureTwoContract.Navigator.startFeatureTwo(this)
         }
     }
 

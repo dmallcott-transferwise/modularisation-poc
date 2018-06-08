@@ -1,8 +1,9 @@
 package com.transferwise.feature_two.ui
 
 import com.transferwise.feature_two.interactor.GetFeatureTwoInteractor
+import javax.inject.Inject
 
-internal class FeatureTwoPresenter(private val interactor: GetFeatureTwoInteractor) {
+class FeatureTwoPresenter @Inject constructor(private val interactor: GetFeatureTwoInteractor) {
 
     private var view: FeatureTwoView? = null
 

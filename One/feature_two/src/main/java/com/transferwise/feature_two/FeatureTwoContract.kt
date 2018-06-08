@@ -7,12 +7,12 @@ import com.transferwise.network.ApiClient
 
 class FeatureTwoContract {
 
-    interface FeatureTwoDependencyProvider {
+    interface DependencyProvider {
 
-        fun provide() : ApiClient
+        fun createTwoComponent() : FeatureTwoComponent
     }
 
-    object FeatureTwoNavigator {
+    object Navigator {
         // TODO : this is better through implicit intents
         fun startFeatureTwo(context: Context) {
             context.startActivity(Intent(context, FeatureTwoActivity::class.java))
