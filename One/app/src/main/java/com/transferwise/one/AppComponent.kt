@@ -1,7 +1,6 @@
 package com.transferwise.one
 
 import com.transferwise.feature_one.FeatureOneComponent
-import com.transferwise.feature_one.ScopeOne
 import com.transferwise.feature_two.FeatureTwoComponent
 import dagger.Component
 import javax.inject.Singleton

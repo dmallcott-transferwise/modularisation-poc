@@ -1,10 +1,12 @@
 package com.transferwise.feature_one.ui
 
+import com.transferwise.feature_one.Mockable
 import com.transferwise.feature_two.FeatureOneView
 import com.transferwise.feature_one.interactor.GetFeatureOneInteractor
 import javax.inject.Inject
 import javax.inject.Singleton
 
+@Mockable
 class FeatureOnePresenter @Inject constructor(private val interactor: GetFeatureOneInteractor) {
 
     private var view: FeatureOneView? = null
